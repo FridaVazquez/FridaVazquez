@@ -1,0 +1,27 @@
+<html><head> 
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> 
+ </head> 
+ <body> 
+  <div id="app" class="container"> 
+         <div> 
+    <h1><strong>POKE API</strong></h1>
+    <font color="sky blue"><h4>Frida Monserrat Vazquez de la Cruz</h4></font> 
+  
+   </div>
+          
+        <div class="row"> 
+        <div class="col-md"> 
+            <ul> 
+             <li v-for="poke in pokes"> {{poke.name}} -- <button class="btn btn-warning" v-bind:href="poke.url" v-on:click="pokesImg(poke.url)">{{poke.url}}</button> <br><br> </li> 
+            </ul> 
+          
+    </div> 
+         <div class="col-sm">
+             <h5 class="text-secondary">IMAGEN:</h5>
+                <img width="50%" height="50%" v-bind:src="pokeImg.dream_world.front_default"> 
+        </div> 
+     </div> 
+  </div>
+    <script>
+</body></html>
